@@ -33,7 +33,7 @@ export function Navigation({ currentSlide, totalSlides, onGoTo }: NavigationProp
 
   return (
     <div
-      className={`fixed bottom-8 right-8 z-50 flex flex-col gap-2 transition-opacity duration-500 ${
+      className={`absolute bottom-8 right-8 z-50 flex flex-col gap-2 transition-opacity duration-500 ${
         visible ? "opacity-100" : "opacity-0"
       }`}
     >
