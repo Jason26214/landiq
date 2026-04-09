@@ -148,6 +148,15 @@ Based on [Orens Capital](https://www.orenscapital.com.au) — institutional prop
 | National Scale | Oct–Nov | QLD+SA+WA expansion, sales module, advanced risk AI |
 | Full Platform | Dec | All states, API marketplace, enterprise deployment |
 
+## Team
+
+| Role | Members |
+|------|---------|
+| **Mentor** | Winston |
+| **Team Lead** | Hal |
+| **BA** | David |
+| **Dev** | Cathy (DevOps), Edward, Icey, Jason, Raymond, Sharon, Shawn, Skylar, Stella, Vanni, Zoey |
+
 ## License
 
 Proprietary — All rights reserved.
