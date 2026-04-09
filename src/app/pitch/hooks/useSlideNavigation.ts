@@ -6,14 +6,8 @@ interface UseSlideNavigationOptions {
   totalSlides: number;
 }
 
-function getInitialSlide(total: number): number {
-  if (typeof window === "undefined") return 0;
-  const hash = parseInt(window.location.hash.replace("#", ""), 10);
-  return hash >= 0 && hash < total ? hash : 0;
-}
-
 export function useSlideNavigation({ totalSlides }: UseSlideNavigationOptions) {
-  const [currentSlide, setCurrentSlide] = useState(() => getInitialSlide(totalSlides));
+  const [currentSlide, setCurrentSlide] = useState(0);
   const [direction, setDirection] = useState<"forward" | "backward">("forward");
   const touchStartX = useRef(0);
 
@@ -25,6 +19,14 @@ export function useSlideNavigation({ totalSlides }: UseSlideNavigationOptions) {
     },
     [currentSlide, totalSlides]
   );
+
+  // Read URL hash on mount (client-only) to jump to a specific slide
+  useEffect(() => {
+    const hash = parseInt(window.location.hash.replace("#", ""), 10);
+    if (hash > 0 && hash < totalSlides) {
+      setCurrentSlide(hash);
+    }
+  }, [totalSlides]);
 
   const next = useCallback(() => {
     if (currentSlide < totalSlides - 1) {

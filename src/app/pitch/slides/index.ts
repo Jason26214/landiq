@@ -15,13 +15,14 @@ import { CompetitiveSlide } from "./CompetitiveSlide";
 import { PricingSlide } from "./PricingSlide";
 import { TimeSavingsSlide } from "./TimeSavingsSlide";
 import { RoadmapSlide } from "./RoadmapSlide";
-// import { TeamSlide } from "./TeamSlide";
+import { TeamSlide } from "./TeamSlide";
 import { TechStackSlide } from "./TechStackSlide";
 import { CTASlide } from "./CTASlide";
 
 export const slides = [
   CoverSlide,          // 0  — 封面
-  ProblemSlide,        // 1  — 痛点
+  TeamSlide,           // 1  — 团队介绍
+  ProblemSlide,        // 2  — 痛点
   MarketSlide,         // 2  — 市场
   SolutionHeroSlide,   // 3  — 解决方案 Hero
   HowItWorksSlide,     // 4  — 三步流程
@@ -36,8 +37,7 @@ export const slides = [
   CompetitiveSlide,    // 13 — 竞争优势
   PricingSlide,        // 14 — 成本节省
   TimeSavingsSlide,    // 15 — 时间节省 ⭐ NEW
-  RoadmapSlide,        // 16 — 路线图
-  // TeamSlide,        // hidden for now
-  TechStackSlide,      // 17 — 技术栈 ⭐ NEW
+  RoadmapSlide,        // 17 — 路线图
+  TechStackSlide,      // 18 — 技术栈
   CTASlide,            // 18 — CTA
 ];
