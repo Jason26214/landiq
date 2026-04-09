@@ -41,16 +41,16 @@ export function TechStackSlide() {
 				{/* Header */}
 				<div className="flex items-end justify-between">
 					<FadeIn>
-						<p className="font-sans text-sm uppercase tracking-[0.08em] text-primary-600 mb-3">
+						<p className="font-sans text-[15px] uppercase tracking-[0.08em] text-primary-600 mb-3">
 							Technology
 						</p>
-						<h2 className="font-serif text-[clamp(1.8rem,3.5vw,2.8rem)] text-primary-900 leading-[1.2]">
+						<h2 className="font-serif text-[clamp(2rem,4vw,3rem)] text-primary-900 leading-[1.2]">
 							Four apps, one monorepo, zero friction
 						</h2>
 					</FadeIn>
 					<FadeIn delay={0.3}>
-						<div className="flex items-center gap-2 px-4 py-2 rounded-full bg-accent-light shrink-0 mb-1">
-							<span className="font-sans text-xs font-medium text-accent">
+						<div className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-accent-light shrink-0 mb-1">
+							<span className="font-sans text-[13px] font-medium text-accent">
 								Turborepo + pnpm Workspaces
 							</span>
 						</div>
@@ -67,24 +67,24 @@ export function TechStackSlide() {
 							transition={{ duration: 0.5, delay: 0.3 + i * 0.12 }}
 							className="bg-white rounded-xl border border-surface-300 px-6 py-7"
 						>
-							<div className="flex items-center gap-3 mb-5">
-								<div className="w-11 h-11 rounded-full bg-primary-800 flex items-center justify-center">
-									<app.icon className="w-5 h-5 text-white" strokeWidth={1.5} />
+							<div className="flex items-center gap-3.5 mb-5">
+								<div className="w-12 h-12 rounded-full bg-primary-800 flex items-center justify-center">
+									<app.icon className="w-5.5 h-5.5 text-white" strokeWidth={1.5} />
 								</div>
 								<div>
-									<h3 className="font-sans text-[15px] font-medium text-primary-900">
+									<h3 className="font-sans text-[17px] font-medium text-primary-900">
 										{app.name}
 									</h3>
-									<p className="font-sans text-[11px] text-surface-500">
+									<p className="font-sans text-[13px] text-surface-500">
 										{app.domain}
 									</p>
 								</div>
 							</div>
-							<div className="flex items-center gap-2">
-								<span className="font-sans text-[11px] bg-surface-100 text-primary-700 px-3 py-1.5 rounded-full border border-surface-300">
+							<div className="flex items-center gap-2.5">
+								<span className="font-sans text-[13px] bg-surface-100 text-primary-700 px-3.5 py-1.5 rounded-full border border-surface-300">
 									{app.tech}
 								</span>
-								<span className="font-sans text-[10px] bg-primary-50 text-primary-600 px-2.5 py-1 rounded-full font-medium">
+								<span className="font-sans text-[12px] bg-primary-50 text-primary-600 px-3 py-1.5 rounded-full font-medium">
 									{app.badge}
 								</span>
 							</div>
@@ -97,7 +97,7 @@ export function TechStackSlide() {
 					initial={{ opacity: 0, y: 25 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6, delay: 0.7 }}
-					className="bg-primary-800 rounded-xl py-8 px-7 relative overflow-hidden"
+					className="bg-primary-800 rounded-xl py-8 px-8 relative overflow-hidden"
 				>
 					<svg
 						className="absolute inset-0 w-full h-full opacity-[0.06]"
@@ -116,21 +116,21 @@ export function TechStackSlide() {
 					</svg>
 
 					<div className="relative z-10 flex items-center justify-between">
-						<div className="flex items-center gap-4">
-							<div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center border border-white/10">
-								<Server className="w-6 h-6 text-white" strokeWidth={1.5} />
+						<div className="flex items-center gap-5">
+							<div className="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center border border-white/10">
+								<Server className="w-7 h-7 text-white" strokeWidth={1.5} />
 							</div>
 							<div>
-								<h3 className="font-sans text-[18px] font-medium text-white">
+								<h3 className="font-sans text-[20px] font-medium text-white">
 									REST API
 								</h3>
-								<p className="font-sans text-[12px] text-white/50 mt-0.5">
+								<p className="font-sans text-[14px] text-white/50 mt-1">
 									api.landiq.com.au/api/v1 · JWT Auth · Multi-tenant RBAC
 								</p>
 							</div>
 						</div>
-						<div className="flex items-center gap-2">
-							<span className="font-sans text-[11px] font-medium text-accent bg-accent/10 px-3 py-1.5 rounded-full">
+						<div className="flex items-center gap-2.5">
+							<span className="font-sans text-[12px] font-medium text-accent bg-accent/10 px-3.5 py-2 rounded-full">
 								Shared: Zod Schemas
 							</span>
 							{["NestJS 11", "TypeORM", "TypeScript"].map((tech, i) => (
@@ -139,7 +139,7 @@ export function TechStackSlide() {
 									initial={{ opacity: 0, scale: 0.9 }}
 									animate={{ opacity: 1, scale: 1 }}
 									transition={{ delay: 1.0 + i * 0.08 }}
-									className="font-sans text-[11px] bg-white/10 text-white px-3 py-1.5 rounded-full border border-white/10"
+									className="font-sans text-[13px] bg-white/10 text-white px-3.5 py-2 rounded-full border border-white/10"
 								>
 									{tech}
 								</motion.span>
@@ -154,31 +154,31 @@ export function TechStackSlide() {
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ delay: 1.2 }}
-						className="bg-white rounded-xl border border-surface-300 px-6 py-5"
+						className="bg-white rounded-xl border border-surface-300 px-7 py-6"
 					>
-						<p className="font-sans text-[11px] uppercase tracking-[0.08em] text-surface-500 font-medium mb-4">
+						<p className="font-sans text-[12px] uppercase tracking-[0.08em] text-surface-500 font-medium mb-4">
 							Infrastructure
 						</p>
-						<div className="flex items-center gap-6">
-							<div className="flex items-center gap-2.5">
+						<div className="flex items-center gap-7">
+							<div className="flex items-center gap-3">
 								<Database className="w-5 h-5 text-primary-600" strokeWidth={1.5} />
 								<div>
-									<p className="font-sans text-[13px] font-medium text-primary-900">PostgreSQL</p>
-									<p className="font-sans text-[11px] text-surface-500">PostGIS · pgvector</p>
+									<p className="font-sans text-[15px] font-medium text-primary-900">PostgreSQL</p>
+									<p className="font-sans text-[12px] text-surface-500">PostGIS · pgvector</p>
 								</div>
 							</div>
-							<div className="flex items-center gap-2.5">
+							<div className="flex items-center gap-3">
 								<HardDrive className="w-5 h-5 text-primary-600" strokeWidth={1.5} />
 								<div>
-									<p className="font-sans text-[13px] font-medium text-primary-900">Redis</p>
-									<p className="font-sans text-[11px] text-surface-500">BullMQ Queues</p>
+									<p className="font-sans text-[15px] font-medium text-primary-900">Redis</p>
+									<p className="font-sans text-[12px] text-surface-500">BullMQ Queues</p>
 								</div>
 							</div>
-							<div className="flex items-center gap-2.5">
+							<div className="flex items-center gap-3">
 								<Cloud className="w-5 h-5 text-primary-600" strokeWidth={1.5} />
 								<div>
-									<p className="font-sans text-[13px] font-medium text-primary-900">AWS S3</p>
-									<p className="font-sans text-[11px] text-surface-500">File Storage</p>
+									<p className="font-sans text-[15px] font-medium text-primary-900">AWS S3</p>
+									<p className="font-sans text-[12px] text-surface-500">File Storage</p>
 								</div>
 							</div>
 						</div>
@@ -188,24 +188,24 @@ export function TechStackSlide() {
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ delay: 1.35 }}
-						className="bg-white rounded-xl border border-surface-300 px-6 py-5"
+						className="bg-white rounded-xl border border-surface-300 px-7 py-6"
 					>
-						<p className="font-sans text-[11px] uppercase tracking-[0.08em] text-surface-500 font-medium mb-4">
+						<p className="font-sans text-[12px] uppercase tracking-[0.08em] text-surface-500 font-medium mb-4">
 							Cloud Deployment
 						</p>
-						<div className="flex items-center gap-6">
-							<div className="flex items-center gap-2.5">
+						<div className="flex items-center gap-7">
+							<div className="flex items-center gap-3">
 								<Cloud className="w-5 h-5 text-primary-600" strokeWidth={1.5} />
 								<div>
-									<p className="font-sans text-[13px] font-medium text-primary-900">AWS Sydney</p>
-									<p className="font-sans text-[11px] text-surface-500">EC2 · S3 · CloudFront</p>
+									<p className="font-sans text-[15px] font-medium text-primary-900">AWS Sydney</p>
+									<p className="font-sans text-[12px] text-surface-500">EC2 · S3 · CloudFront</p>
 								</div>
 							</div>
-							<div className="flex items-center gap-2.5">
+							<div className="flex items-center gap-3">
 								<GitBranch className="w-5 h-5 text-primary-600" strokeWidth={1.5} />
 								<div>
-									<p className="font-sans text-[13px] font-medium text-primary-900">GitHub Actions</p>
-									<p className="font-sans text-[11px] text-surface-500">Lint → Test → Build → Deploy</p>
+									<p className="font-sans text-[15px] font-medium text-primary-900">GitHub Actions</p>
+									<p className="font-sans text-[12px] text-surface-500">Lint → Test → Build → Deploy</p>
 								</div>
 							</div>
 						</div>
