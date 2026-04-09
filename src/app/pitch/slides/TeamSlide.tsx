@@ -43,9 +43,9 @@ export function TeamSlide() {
 								initial={{ opacity: 0, x: 20 }}
 								animate={{ opacity: 1, x: 0 }}
 								transition={{ delay: 0.3 + i * 0.12 }}
-								className="grid grid-cols-[140px_1fr] items-baseline py-4 border-b border-surface-300 first:border-t-2 first:border-t-primary-800"
+								className="grid grid-cols-[140px_1fr] items-baseline py-5 border-b border-surface-300 first:border-t-2 first:border-t-primary-800"
 							>
-								<span className="font-sans text-[13px] font-medium text-primary-600 uppercase tracking-wider">
+								<span className="font-sans text-[12px] font-semibold text-primary-600 uppercase tracking-[0.1em]">
 									{role.title}
 								</span>
 								<div>
@@ -53,13 +53,13 @@ export function TeamSlide() {
 										(role.members as string[][]).map((row, ri) => (
 											<p
 												key={ri}
-												className="font-sans text-[17px] text-primary-900 leading-relaxed"
+												className="font-serif text-[22px] text-primary-900 leading-relaxed tracking-tight"
 											>
 												{row.join("  ·  ")}
 											</p>
 										))
 									) : (
-										<p className="font-sans text-[17px] text-primary-900">
+										<p className="font-serif text-[22px] text-primary-900 tracking-tight">
 											{(role.members as string[]).join("  ·  ")}
 										</p>
 									)}
