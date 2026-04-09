@@ -16,6 +16,7 @@ import { PricingSlide } from "./PricingSlide";
 import { TimeSavingsSlide } from "./TimeSavingsSlide";
 import { RoadmapSlide } from "./RoadmapSlide";
 // import { TeamSlide } from "./TeamSlide";
+import { TechStackSlide } from "./TechStackSlide";
 import { CTASlide } from "./CTASlide";
 
 export const slides = [
@@ -37,5 +38,6 @@ export const slides = [
   TimeSavingsSlide,    // 15 — 时间节省 ⭐ NEW
   RoadmapSlide,        // 16 — 路线图
   // TeamSlide,        // hidden for now
-  CTASlide,            // 17 — CTA
+  TechStackSlide,      // 17 — 技术栈 ⭐ NEW
+  CTASlide,            // 18 — CTA
 ];

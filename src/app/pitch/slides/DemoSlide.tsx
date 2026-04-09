@@ -79,7 +79,13 @@ export function DemoSlide() {
     const initMap = async () => {
       const L = await import("leaflet");
 
-      const map = L.map(mapRef.current!, {
+      // Clear stale Leaflet state on the DOM element (React Strict Mode re-mount)
+      const container = mapRef.current!;
+      if ((container as any)._leaflet_id) {
+        (container as any)._leaflet_id = null;
+      }
+
+      const map = L.map(container, {
         center: [-33.8688, 151.2093],
         zoom: 11,
         zoomControl: false,
