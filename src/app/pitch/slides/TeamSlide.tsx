@@ -20,7 +20,7 @@ const roles = [
 
 export function TeamSlide() {
 	return (
-		<SlideLayout bg="bg-white">
+		<SlideLayout bg="bg-surface-300">
 			<div className="grid grid-cols-12 gap-16 w-full items-center">
 				{/* Left — Text */}
 				<div className="col-span-4">
@@ -43,7 +43,7 @@ export function TeamSlide() {
 								initial={{ opacity: 0, x: 20 }}
 								animate={{ opacity: 1, x: 0 }}
 								transition={{ delay: 0.3 + i * 0.12 }}
-								className="grid grid-cols-[140px_1fr] items-baseline py-5 border-b border-surface-300 first:border-t-2 first:border-t-primary-800"
+								className="grid grid-cols-[140px_1fr] items-baseline py-5 border-b border-primary-200"
 							>
 								<span className="font-sans text-[12px] font-semibold text-primary-600 uppercase tracking-[0.1em]">
 									{role.title}
