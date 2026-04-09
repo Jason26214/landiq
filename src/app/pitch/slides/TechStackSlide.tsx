@@ -14,186 +14,190 @@ import {
 	GitBranch,
 } from "lucide-react";
 
-const apps = [
-	{
-		name: "Marketing Website",
-		tech: "Next.js 15",
-		desc: "SSR / SEO",
-		icon: Globe,
-	},
-	{
-		name: "Enterprise Portal",
-		tech: "React 19 + Vite",
-		desc: "SPA",
-		icon: LayoutDashboard,
-	},
-	{
-		name: "Admin Console",
-		tech: "React 19 + Vite",
-		desc: "SPA",
-		icon: Shield,
-	},
-];
-
-const infra = [
-	{ icon: Database, label: "PostgreSQL + PostGIS", sub: "pgvector" },
-	{ icon: HardDrive, label: "Redis + BullMQ", sub: "Async Jobs" },
-	{ icon: Cloud, label: "AWS S3", sub: "File Storage" },
+const frontendApps = [
+	{ name: "Marketing Website", domain: "landiq.com.au", tech: "Next.js 15", badge: "SSR", icon: Globe },
+	{ name: "Enterprise Portal", domain: "app.landiq.com.au", tech: "React 19 + Vite", badge: "SPA", icon: LayoutDashboard },
+	{ name: "Admin Console", domain: "console.landiq.com.au", tech: "React 19 + Vite", badge: "SPA", icon: Shield },
 ];
 
 export function TechStackSlide() {
 	return (
 		<SlideLayout bg="bg-white">
-			<div className="grid grid-cols-12 gap-16 w-full items-center">
-				{/* Left — Text */}
-				<div className="col-span-5">
+			<div className="w-full">
+				{/* Header */}
+				<div className="flex items-end justify-between">
 					<FadeIn>
 						<p className="font-sans text-sm uppercase tracking-[0.08em] text-primary-600 mb-3">
 							Technology
 						</p>
-						<h2 className="font-serif text-[clamp(1.8rem,3.5vw,2.6rem)] text-primary-900 leading-[1.2]">
-							Enterprise-grade architecture built for scale
+						<h2 className="font-serif text-[clamp(1.8rem,3.5vw,2.8rem)] text-primary-900 leading-[1.2]">
+							Four apps, one monorepo, zero friction
 						</h2>
-						<p className="font-body text-[16px] text-surface-500 mt-6 leading-relaxed">
-							Turborepo monorepo with 4 purpose-built applications,
-							a shared type system via Zod, and fully automated
-							CI/CD — from lint to deploy.
-						</p>
 					</FadeIn>
-
-					{/* Deploy badges */}
-					<FadeIn delay={0.6}>
-						<div className="mt-8 flex flex-col gap-2.5">
-							<div className="inline-flex items-center gap-2 bg-primary-50 px-4 py-2 rounded-full w-fit">
-								<Cloud className="w-3.5 h-3.5 text-primary-700" strokeWidth={1.5} />
-								<span className="font-sans text-xs font-medium text-primary-800">
-									AWS Sydney · EC2 + S3 + CloudFront
-								</span>
-							</div>
-							<div className="inline-flex items-center gap-2 bg-primary-50 px-4 py-2 rounded-full w-fit">
-								<GitBranch className="w-3.5 h-3.5 text-primary-700" strokeWidth={1.5} />
-								<span className="font-sans text-xs font-medium text-primary-800">
-									GitHub Actions · Lint → Test → Build → Deploy
-								</span>
-							</div>
+					<FadeIn delay={0.3}>
+						<div className="flex items-center gap-2 px-4 py-2 rounded-full bg-accent-light shrink-0 mb-1">
+							<span className="font-sans text-xs font-medium text-accent">
+								Turborepo + pnpm Workspaces
+							</span>
 						</div>
 					</FadeIn>
 				</div>
 
-				{/* Right — Architecture diagram */}
-				<div className="col-span-7">
-					<div className="rounded-xl border border-surface-300 bg-surface-100/50 p-6">
-						{/* Monorepo header */}
+				{/* === ROW 1: 3 Frontend Apps === */}
+				<div className="grid grid-cols-3 gap-4 mt-10">
+					{frontendApps.map((app, i) => (
 						<motion.div
-							initial={{ opacity: 0 }}
-							animate={{ opacity: 1 }}
-							transition={{ delay: 0.3 }}
-							className="flex items-center gap-2 mb-5"
-						>
-							<span className="font-sans text-[11px] uppercase tracking-[0.08em] text-surface-500 font-medium">
-								Monorepo
-							</span>
-							<span className="font-sans text-[11px] text-surface-400">
-								Turborepo + pnpm Workspaces
-							</span>
-						</motion.div>
-
-						{/* 3 Frontend apps */}
-						<div className="grid grid-cols-3 gap-3 mb-4">
-							{apps.map((app, i) => (
-								<motion.div
-									key={app.name}
-									initial={{ opacity: 0, y: 20 }}
-									animate={{ opacity: 1, y: 0 }}
-									transition={{ delay: 0.4 + i * 0.12 }}
-									className="bg-white rounded-lg border border-surface-300 p-4 text-center"
-								>
-									<app.icon
-										className="w-5 h-5 text-primary-600 mx-auto mb-2"
-										strokeWidth={1.5}
-									/>
-									<p className="font-sans text-[13px] font-medium text-primary-900">
-										{app.name}
-									</p>
-									<p className="font-sans text-[11px] text-primary-700 mt-1">
-										{app.tech}
-									</p>
-									<p className="font-sans text-[10px] text-surface-500 mt-0.5">
-										{app.desc}
-									</p>
-								</motion.div>
-							))}
-						</div>
-
-						{/* Shared types bar */}
-						<motion.div
-							initial={{ opacity: 0 }}
-							animate={{ opacity: 1 }}
-							transition={{ delay: 0.8 }}
-							className="flex items-center justify-center gap-2 py-2 mb-4 border-y border-dashed border-surface-300"
-						>
-							<span className="font-sans text-[11px] text-surface-500">
-								Shared Types + Validation
-							</span>
-							<span className="font-sans text-[10px] bg-accent-light text-accent px-2 py-0.5 rounded-full font-medium">
-								Zod Schemas
-							</span>
-						</motion.div>
-
-						{/* API card */}
-						<motion.div
-							initial={{ opacity: 0, y: 20 }}
+							key={app.name}
+							initial={{ opacity: 0, y: 30 }}
 							animate={{ opacity: 1, y: 0 }}
-							transition={{ delay: 0.9 }}
-							className="bg-primary-800 rounded-lg p-4 flex items-center justify-between mb-4"
+							transition={{ duration: 0.5, delay: 0.3 + i * 0.12 }}
+							className="bg-surface-100 rounded-xl border border-surface-300 p-5"
 						>
-							<div className="flex items-center gap-3">
-								<Server className="w-5 h-5 text-white" strokeWidth={1.5} />
+							<div className="flex items-center gap-3 mb-3">
+								<div className="w-9 h-9 rounded-full bg-primary-800 flex items-center justify-center">
+									<app.icon className="w-4.5 h-4.5 text-white" strokeWidth={1.5} />
+								</div>
 								<div>
-									<p className="font-sans text-[13px] font-medium text-white">
-										REST API
-									</p>
-									<p className="font-sans text-[11px] text-white/60">
-										/api/v1 · JWT Auth · RBAC
+									<h3 className="font-sans text-[14px] font-medium text-primary-900">
+										{app.name}
+									</h3>
+									<p className="font-sans text-[11px] text-surface-500">
+										{app.domain}
 									</p>
 								</div>
 							</div>
 							<div className="flex items-center gap-2">
-								<span className="font-sans text-[11px] bg-white/15 text-white px-2.5 py-1 rounded-full">
-									NestJS 11
+								<span className="font-sans text-[11px] bg-white text-primary-700 px-2.5 py-1 rounded-full border border-surface-300">
+									{app.tech}
 								</span>
-								<span className="font-sans text-[11px] bg-white/15 text-white px-2.5 py-1 rounded-full">
-									TypeORM
+								<span className="font-sans text-[10px] bg-primary-50 text-primary-600 px-2 py-1 rounded-full font-medium">
+									{app.badge}
 								</span>
 							</div>
 						</motion.div>
+					))}
+				</div>
 
-						{/* Infrastructure row */}
-						<div className="grid grid-cols-3 gap-3">
-							{infra.map((item, i) => (
-								<motion.div
-									key={item.label}
-									initial={{ opacity: 0, y: 15 }}
-									animate={{ opacity: 1, y: 0 }}
-									transition={{ delay: 1.0 + i * 0.1 }}
-									className="bg-white rounded-lg border border-surface-300 p-3 flex items-center gap-2.5"
+				{/* === ROW 2: API — full width hero bar === */}
+				<motion.div
+					initial={{ opacity: 0, y: 25 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.6, delay: 0.7 }}
+					className="mt-4 bg-primary-800 rounded-xl p-6 relative overflow-hidden"
+				>
+					<svg
+						className="absolute inset-0 w-full h-full opacity-[0.06]"
+						viewBox="0 0 1200 200"
+						preserveAspectRatio="xMidYMid slice"
+					>
+						{[30, 65, 100, 135, 170].map((y, i) => (
+							<path
+								key={i}
+								d={`M-50 ${y} Q300 ${y - 15 + i * 6} 600 ${y + 12} T1250 ${y}`}
+								fill="none"
+								stroke="white"
+								strokeWidth="1"
+							/>
+						))}
+					</svg>
+
+					<div className="relative z-10 flex items-center justify-between">
+						<div className="flex items-center gap-4">
+							<div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center border border-white/10">
+								<Server className="w-5.5 h-5.5 text-white" strokeWidth={1.5} />
+							</div>
+							<div>
+								<h3 className="font-sans text-[17px] font-medium text-white">
+									REST API
+								</h3>
+								<p className="font-sans text-[12px] text-white/50 mt-0.5">
+									api.landiq.com.au/api/v1 · JWT Auth · Multi-tenant RBAC
+								</p>
+							</div>
+						</div>
+						<div className="flex items-center gap-2">
+							<span className="font-sans text-[11px] font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">
+								Shared: Zod Schemas
+							</span>
+							{["NestJS 11", "TypeORM", "TypeScript"].map((tech, i) => (
+								<motion.span
+									key={tech}
+									initial={{ opacity: 0, scale: 0.9 }}
+									animate={{ opacity: 1, scale: 1 }}
+									transition={{ delay: 1.0 + i * 0.08 }}
+									className="font-sans text-[11px] bg-white/10 text-white px-3 py-1.5 rounded-full border border-white/10"
 								>
-									<item.icon
-										className="w-4 h-4 text-primary-500 shrink-0"
-										strokeWidth={1.5}
-									/>
-									<div>
-										<p className="font-sans text-[11px] font-medium text-primary-900 leading-tight">
-											{item.label}
-										</p>
-										<p className="font-sans text-[10px] text-surface-500">
-											{item.sub}
-										</p>
-									</div>
-								</motion.div>
+									{tech}
+								</motion.span>
 							))}
 						</div>
 					</div>
+				</motion.div>
+
+				{/* === ROW 3: Infrastructure + Deployment === */}
+				<div className="grid grid-cols-2 gap-4 mt-4">
+					{/* Infrastructure */}
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ delay: 1.2 }}
+						className="bg-surface-100 rounded-xl border border-surface-300 p-5"
+					>
+						<p className="font-sans text-[11px] uppercase tracking-[0.08em] text-surface-500 font-medium mb-3">
+							Infrastructure
+						</p>
+						<div className="flex items-center gap-5">
+							<div className="flex items-center gap-2">
+								<Database className="w-4 h-4 text-primary-600" strokeWidth={1.5} />
+								<div>
+									<p className="font-sans text-[13px] font-medium text-primary-900">PostgreSQL</p>
+									<p className="font-sans text-[10px] text-surface-500">PostGIS · pgvector</p>
+								</div>
+							</div>
+							<div className="flex items-center gap-2">
+								<HardDrive className="w-4 h-4 text-primary-600" strokeWidth={1.5} />
+								<div>
+									<p className="font-sans text-[13px] font-medium text-primary-900">Redis</p>
+									<p className="font-sans text-[10px] text-surface-500">BullMQ Queues</p>
+								</div>
+							</div>
+							<div className="flex items-center gap-2">
+								<Cloud className="w-4 h-4 text-primary-600" strokeWidth={1.5} />
+								<div>
+									<p className="font-sans text-[13px] font-medium text-primary-900">AWS S3</p>
+									<p className="font-sans text-[10px] text-surface-500">File Storage</p>
+								</div>
+							</div>
+						</div>
+					</motion.div>
+
+					{/* Deployment */}
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ delay: 1.35 }}
+						className="bg-surface-100 rounded-xl border border-surface-300 p-5"
+					>
+						<p className="font-sans text-[11px] uppercase tracking-[0.08em] text-surface-500 font-medium mb-3">
+							Cloud Deployment
+						</p>
+						<div className="flex items-center gap-5">
+							<div className="flex items-center gap-2">
+								<Cloud className="w-4 h-4 text-primary-600" strokeWidth={1.5} />
+								<div>
+									<p className="font-sans text-[13px] font-medium text-primary-900">AWS Sydney</p>
+									<p className="font-sans text-[10px] text-surface-500">EC2 · S3 · CloudFront</p>
+								</div>
+							</div>
+							<div className="flex items-center gap-2">
+								<GitBranch className="w-4 h-4 text-primary-600" strokeWidth={1.5} />
+								<div>
+									<p className="font-sans text-[13px] font-medium text-primary-900">GitHub Actions</p>
+									<p className="font-sans text-[10px] text-surface-500">Lint → Test → Build → Deploy</p>
+								</div>
+							</div>
+						</div>
+					</motion.div>
 				</div>
 			</div>
 		</SlideLayout>
