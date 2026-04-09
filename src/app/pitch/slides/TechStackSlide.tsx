@@ -22,8 +22,22 @@ const frontendApps = [
 
 export function TechStackSlide() {
 	return (
-		<SlideLayout bg="bg-white">
-			<div className="w-full">
+		<SlideLayout bg="bg-surface-100">
+			{/* Grid background */}
+			<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 0.04 }}
+				transition={{ delay: 0.2 }}
+				className="absolute inset-0"
+				style={{
+					backgroundImage:
+						"linear-gradient(#134A32 1px, transparent 1px), linear-gradient(90deg, #134A32 1px, transparent 1px)",
+					backgroundSize: "80px 80px",
+				}}
+			/>
+
+			{/* Full-height flex container */}
+			<div className="w-full relative z-10 flex flex-col justify-center h-full gap-5">
 				{/* Header */}
 				<div className="flex items-end justify-between">
 					<FadeIn>
@@ -44,21 +58,21 @@ export function TechStackSlide() {
 				</div>
 
 				{/* === ROW 1: 3 Frontend Apps === */}
-				<div className="grid grid-cols-3 gap-4 mt-10">
+				<div className="grid grid-cols-3 gap-4">
 					{frontendApps.map((app, i) => (
 						<motion.div
 							key={app.name}
 							initial={{ opacity: 0, y: 30 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.5, delay: 0.3 + i * 0.12 }}
-							className="bg-surface-100 rounded-xl border border-surface-300 p-5"
+							className="bg-white rounded-xl border border-surface-300 px-6 py-7"
 						>
-							<div className="flex items-center gap-3 mb-3">
-								<div className="w-9 h-9 rounded-full bg-primary-800 flex items-center justify-center">
-									<app.icon className="w-4.5 h-4.5 text-white" strokeWidth={1.5} />
+							<div className="flex items-center gap-3 mb-5">
+								<div className="w-11 h-11 rounded-full bg-primary-800 flex items-center justify-center">
+									<app.icon className="w-5 h-5 text-white" strokeWidth={1.5} />
 								</div>
 								<div>
-									<h3 className="font-sans text-[14px] font-medium text-primary-900">
+									<h3 className="font-sans text-[15px] font-medium text-primary-900">
 										{app.name}
 									</h3>
 									<p className="font-sans text-[11px] text-surface-500">
@@ -67,10 +81,10 @@ export function TechStackSlide() {
 								</div>
 							</div>
 							<div className="flex items-center gap-2">
-								<span className="font-sans text-[11px] bg-white text-primary-700 px-2.5 py-1 rounded-full border border-surface-300">
+								<span className="font-sans text-[11px] bg-surface-100 text-primary-700 px-3 py-1.5 rounded-full border border-surface-300">
 									{app.tech}
 								</span>
-								<span className="font-sans text-[10px] bg-primary-50 text-primary-600 px-2 py-1 rounded-full font-medium">
+								<span className="font-sans text-[10px] bg-primary-50 text-primary-600 px-2.5 py-1 rounded-full font-medium">
 									{app.badge}
 								</span>
 							</div>
@@ -78,12 +92,12 @@ export function TechStackSlide() {
 					))}
 				</div>
 
-				{/* === ROW 2: API — full width hero bar === */}
+				{/* === ROW 2: API — full width hero === */}
 				<motion.div
 					initial={{ opacity: 0, y: 25 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6, delay: 0.7 }}
-					className="mt-4 bg-primary-800 rounded-xl p-6 relative overflow-hidden"
+					className="bg-primary-800 rounded-xl py-8 px-7 relative overflow-hidden"
 				>
 					<svg
 						className="absolute inset-0 w-full h-full opacity-[0.06]"
@@ -103,11 +117,11 @@ export function TechStackSlide() {
 
 					<div className="relative z-10 flex items-center justify-between">
 						<div className="flex items-center gap-4">
-							<div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center border border-white/10">
-								<Server className="w-5.5 h-5.5 text-white" strokeWidth={1.5} />
+							<div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center border border-white/10">
+								<Server className="w-6 h-6 text-white" strokeWidth={1.5} />
 							</div>
 							<div>
-								<h3 className="font-sans text-[17px] font-medium text-white">
+								<h3 className="font-sans text-[18px] font-medium text-white">
 									REST API
 								</h3>
 								<p className="font-sans text-[12px] text-white/50 mt-0.5">
@@ -116,7 +130,7 @@ export function TechStackSlide() {
 							</div>
 						</div>
 						<div className="flex items-center gap-2">
-							<span className="font-sans text-[11px] font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">
+							<span className="font-sans text-[11px] font-medium text-accent bg-accent/10 px-3 py-1.5 rounded-full">
 								Shared: Zod Schemas
 							</span>
 							{["NestJS 11", "TypeORM", "TypeScript"].map((tech, i) => (
@@ -135,65 +149,63 @@ export function TechStackSlide() {
 				</motion.div>
 
 				{/* === ROW 3: Infrastructure + Deployment === */}
-				<div className="grid grid-cols-2 gap-4 mt-4">
-					{/* Infrastructure */}
+				<div className="grid grid-cols-2 gap-4">
 					<motion.div
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ delay: 1.2 }}
-						className="bg-surface-100 rounded-xl border border-surface-300 p-5"
+						className="bg-white rounded-xl border border-surface-300 px-6 py-5"
 					>
-						<p className="font-sans text-[11px] uppercase tracking-[0.08em] text-surface-500 font-medium mb-3">
+						<p className="font-sans text-[11px] uppercase tracking-[0.08em] text-surface-500 font-medium mb-4">
 							Infrastructure
 						</p>
-						<div className="flex items-center gap-5">
-							<div className="flex items-center gap-2">
-								<Database className="w-4 h-4 text-primary-600" strokeWidth={1.5} />
+						<div className="flex items-center gap-6">
+							<div className="flex items-center gap-2.5">
+								<Database className="w-5 h-5 text-primary-600" strokeWidth={1.5} />
 								<div>
 									<p className="font-sans text-[13px] font-medium text-primary-900">PostgreSQL</p>
-									<p className="font-sans text-[10px] text-surface-500">PostGIS · pgvector</p>
+									<p className="font-sans text-[11px] text-surface-500">PostGIS · pgvector</p>
 								</div>
 							</div>
-							<div className="flex items-center gap-2">
-								<HardDrive className="w-4 h-4 text-primary-600" strokeWidth={1.5} />
+							<div className="flex items-center gap-2.5">
+								<HardDrive className="w-5 h-5 text-primary-600" strokeWidth={1.5} />
 								<div>
 									<p className="font-sans text-[13px] font-medium text-primary-900">Redis</p>
-									<p className="font-sans text-[10px] text-surface-500">BullMQ Queues</p>
+									<p className="font-sans text-[11px] text-surface-500">BullMQ Queues</p>
 								</div>
 							</div>
-							<div className="flex items-center gap-2">
-								<Cloud className="w-4 h-4 text-primary-600" strokeWidth={1.5} />
+							<div className="flex items-center gap-2.5">
+								<Cloud className="w-5 h-5 text-primary-600" strokeWidth={1.5} />
 								<div>
 									<p className="font-sans text-[13px] font-medium text-primary-900">AWS S3</p>
-									<p className="font-sans text-[10px] text-surface-500">File Storage</p>
+									<p className="font-sans text-[11px] text-surface-500">File Storage</p>
 								</div>
 							</div>
 						</div>
 					</motion.div>
 
-					{/* Deployment */}
 					<motion.div
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ delay: 1.35 }}
-						className="bg-surface-100 rounded-xl border border-surface-300 p-5"
+						className="bg-white rounded-xl border border-surface-300 px-6 py-5"
 					>
-						<p className="font-sans text-[11px] uppercase tracking-[0.08em] text-surface-500 font-medium mb-3">
+						<p className="font-sans text-[11px] uppercase tracking-[0.08em] text-surface-500 font-medium mb-4">
 							Cloud Deployment
 						</p>
-						<div className="flex items-center gap-5">
-							<div className="flex items-center gap-2">
-								<Cloud className="w-4 h-4 text-primary-600" strokeWidth={1.5} />
+						<div className="flex items-center gap-6">
+							<div className="flex items-center gap-2.5">
+								<Cloud className="w-5 h-5 text-primary-600" strokeWidth={1.5} />
 								<div>
 									<p className="font-sans text-[13px] font-medium text-primary-900">AWS Sydney</p>
-									<p className="font-sans text-[10px] text-surface-500">EC2 · S3 · CloudFront</p>
+									<p className="font-sans text-[11px] text-surface-500">EC2 · S3 · CloudFront</p>
 								</div>
 							</div>
-							<div className="flex items-center gap-2">
-								<GitBranch className="w-4 h-4 text-primary-600" strokeWidth={1.5} />
+							<div className="flex items-center gap-2.5">
+								<GitBranch className="w-5 h-5 text-primary-600" strokeWidth={1.5} />
 								<div>
 									<p className="font-sans text-[13px] font-medium text-primary-900">GitHub Actions</p>
-									<p className="font-sans text-[10px] text-surface-500">Lint → Test → Build → Deploy</p>
+									<p className="font-sans text-[11px] text-surface-500">Lint → Test → Build → Deploy</p>
 								</div>
 							</div>
 						</div>
