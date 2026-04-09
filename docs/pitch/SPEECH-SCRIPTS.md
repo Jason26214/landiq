@@ -1,5 +1,6 @@
 # P3 Proposal — Speech Scripts
 
+**Live Pitch Deck:** https://jason26214.github.io/landiq/pitch
 **Total time:** 15 minutes | **Presenters:** A, B, C, D
 **Language:** Australian English
 
