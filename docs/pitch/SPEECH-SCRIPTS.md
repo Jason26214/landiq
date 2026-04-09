@@ -6,17 +6,17 @@
 
 ---
 
-## Speaker A — Slides 0–4
+## Speaker A — Slides 1–5
 
-### Slide 0 — Cover (~20s)
+### Slide 1 — Cover (~20s)
 
 Good morning everyone. We're here today to present LandIQ — the AI-powered property development operating system. Our mission is simple: automate land feasibility analysis for Australian property developers. Let me introduce our team.
 
-### Slide 1 — Team (~25s)
+### Slide 2 — Team (~25s)
 
 We're a team of fourteen. Our mentor is Winston. Hal is our team lead, David is our BA, and Cathy handles DevOps. The rest of the team are developers — and together, we're building a platform that we believe can fundamentally change how property developers evaluate land in Australia.
 
-### Slide 2 — Problem (~50s)
+### Slide 3 — Problem (~50s)
 
 So what's the problem we're solving? Australian developers are still doing feasibility by hand.
 
@@ -28,13 +28,13 @@ There's no unified system. Land opportunities are managed through email chains a
 
 And then there's what we call the DCP black box. Council-specific design rules are buried in hundreds of pages of unstructured PDFs. Every council is different, and interpreting these rules is one of the most time-consuming parts of the entire process.
 
-### Slide 3 — Market (~40s)
+### Slide 4 — Market (~40s)
 
 To put this in perspective — there are over ten thousand active property developers in Australia. Each site takes roughly eight hours just for initial screening. Due diligence costs over two hundred and fifty thousand dollars per acquisition. And the standard timeline? Twelve weeks.
 
 This is a multi-billion dollar industry that is still running on spreadsheets. The opportunity for automation is enormous.
 
-### Slide 4 — Solution Hero (~25s)
+### Slide 5 — Solution Hero (~25s)
 
 That's where LandIQ comes in. One platform. Address in, feasibility out.
 
@@ -44,9 +44,9 @@ Now let me hand over to Speaker B, who'll walk you through how the platform actu
 
 ---
 
-## Speaker B — Slides 5–9
+## Speaker B — Slides 6–10
 
-### Slide 5 — How It Works (~40s)
+### Slide 6 — How It Works (~40s)
 
 Thanks. LandIQ works in three simple steps.
 
@@ -56,7 +56,7 @@ Step two — our AI queries over thirty government data sources in real time. We
 
 Step three — you get a complete feasibility report. AI-generated analysis with risk scoring and development recommendations, available as PDF, Word, or an interactive dashboard.
 
-### Slide 6 — Data Engine (~50s)
+### Slide 7 — Data Engine (~50s)
 
 Let's talk about the data engine — this is the backbone of LandIQ.
 
@@ -66,7 +66,7 @@ As you can see in the table, we cover zoning, FSR, height limits, bushfire, floo
 
 And here's the key part — all of these endpoints are free and open. No API key required. This is public government data that we're making accessible and actionable.
 
-### Slide 7 — AI Report (~40s)
+### Slide 8 — AI Report (~40s)
 
 Once we have the data, our AI report engine turns it into an institutional-grade feasibility report in minutes.
 
@@ -74,7 +74,7 @@ The report covers five core sections: site overview, planning analysis, developm
 
 Under the hood, we're parsing council DCP PDFs through our LLM, automatically detecting flood, bushfire, heritage and contamination risks, calculating GFA, dwelling yield and density, and running comparable sales analysis.
 
-### Slide 8 — Demo (~45s)
+### Slide 9 — Demo (~45s)
 
 This is our live demo. What you're looking at is an interactive map powered by Leaflet with CartoDB tiles.
 
@@ -84,7 +84,7 @@ You can see the zoning, FSR, height limit, bushfire status, heritage overlay, an
 
 From here, you can generate a full feasibility report with one click.
 
-### Slide 9 — Report Showcase (~50s)
+### Slide 10 — Report Showcase (~50s)
 
 And this is what that report looks like. A professional feasibility report for 42 Bridge Street, Sydney.
 
@@ -98,9 +98,9 @@ I'll pass it over to Speaker C to cover the supporting features.
 
 ---
 
-## Speaker C — Slides 10–14
+## Speaker C — Slides 11–15
 
-### Slide 10 — Document Management (~35s)
+### Slide 11 — Document Management (~35s)
 
 Thanks. Beyond feasibility analysis, LandIQ also solves the document chaos that every development team deals with.
 
@@ -108,7 +108,7 @@ On the left you can see the current reality — files buried in email attachment
 
 On the right is what LandIQ provides — a centralised document hub with full version history, instant search and filtering, and AI-generated reports that are always up to date. Every document is automatically tagged by our AI.
 
-### Slide 11 — Chrome Extension (~30s)
+### Slide 12 — Chrome Extension (~30s)
 
 We're also building a Chrome extension, planned for Phase 1.
 
@@ -116,7 +116,7 @@ The idea is simple — you're browsing property listings on realestate.com.au, D
 
 Zoning, FSR, heritage, bushfire, flood — all overlaid right there in the browser. If a site looks promising, you can open it directly in LandIQ or generate a full report.
 
-### Slide 12 — Email Hub (~30s)
+### Slide 13 — Email Hub (~30s)
 
 Next is our Email Hub. Property developers deal with dozens of project-related emails every day, spread across multiple accounts.
 
@@ -124,7 +124,7 @@ LandIQ connects your work, personal, and project email accounts into one unified
 
 No more digging through inboxes trying to find that one council response.
 
-### Slide 13 — Modules (~30s)
+### Slide 14 — Modules (~30s)
 
 Zooming out — LandIQ is designed as a complete operating system for property development, built around five core modules.
 
@@ -132,7 +132,7 @@ Phase 1 delivers land acquisition pipeline management, the feasibility engine, a
 
 Phase 2 adds property sales — unit inventory, pricing, buyer tracking — and admin operations including employee management and financial tracking.
 
-### Slide 14 — Competitive (~40s)
+### Slide 15 — Competitive (~40s)
 
 So how do we compare to what's already out there?
 
@@ -144,9 +144,9 @@ Over to Speaker D for the business case and technical architecture.
 
 ---
 
-## Speaker D — Slides 15–19
+## Speaker D — Slides 16–20
 
-### Slide 15 — Pricing / Cost Savings (~50s)
+### Slide 16 — Pricing / Cost Savings (~50s)
 
 Thanks. Let's talk about the numbers.
 
@@ -158,7 +158,7 @@ The total? Phase 1 desktop screening drops from twenty-two to sixty-three thousa
 
 If a developer evaluates ten sites per year and abandons seven, that's over seven hundred thousand dollars wasted in traditional due diligence. With LandIQ, the same screening costs under fifty thousand.
 
-### Slide 16 — Time Savings (~45s)
+### Slide 17 — Time Savings (~45s)
 
 And it's not just about cost — it's about speed.
 
@@ -168,7 +168,7 @@ Desktop planning research — two to three days becomes less than five minutes. 
 
 Speed is competitive advantage. A developer evaluating ten sites per month can now screen all of them in a single morning, instead of dedicating a team member for two months. First mover on the best sites wins.
 
-### Slide 17 — Roadmap (~35s)
+### Slide 18 — Roadmap (~35s)
 
 Here's our delivery roadmap for 2026.
 
@@ -178,7 +178,7 @@ June through July brings AI reports and document management. August through Sept
 
 Nine months from first line of code to a full national platform, leveraging AI-assisted development for three to five times faster delivery.
 
-### Slide 18 — Tech Stack (~40s)
+### Slide 19 — Tech Stack (~40s)
 
 Under the hood, LandIQ is built as a Turborepo monorepo with four purpose-built applications.
 
@@ -190,7 +190,7 @@ On the infrastructure side — PostgreSQL with PostGIS for geospatial queries an
 
 Everything deploys to AWS Sydney — EC2, S3, and CloudFront — with a full GitHub Actions CI/CD pipeline running lint, test, build, and deploy on every push.
 
-### Slide 19 — CTA (~15s)
+### Slide 20 — CTA (~15s)
 
 So — are you ready to transform your feasibility process?
 

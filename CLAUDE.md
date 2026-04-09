@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 LandIQ is an AI-powered property development platform for Australian real estate developers. It automates land feasibility analysis by querying government open data APIs, generates feasibility reports via LLM, and provides a unified system for the entire development lifecycle.
 
-**Live:** https://australiaitgroup.github.io/landiq/pitch
+**Live:** https://jason26214.github.io/landiq/pitch
 
 ## Commands
 
@@ -18,15 +18,28 @@ node scripts/generate-pdf.mjs  # Generate pitch deck PDF (requires dev server ru
 
 ## Architecture
 
-**Current state:** Online pitch deck (18 slides) — the platform itself is not yet built.
+**Current state:** Online pitch deck (20 slides) — the platform itself is not yet built.
 
 ### Pitch Deck (`src/app/pitch/`)
 - **Fixed 1440×900 viewport** with `transform: scale` — NOT responsive, behaves like PowerPoint
 - All slides in `slides/` directory, registered in `slides/index.ts`
+- **Slide numbering is 1-based** — matches the on-screen counter (bottom-left "X / 20")
 - Navigation: keyboard (arrows/space), click (right 70% = next), touch swipe, dot navigator
+- URL hash navigation: append `#N` to jump to slide N (1-based), e.g. `/landiq/pitch#19` → Tech Stack
 - Shared animation components: `FadeIn`, `StaggerContainer`, `AnimatedCounter`
 - Interactive map demo: Leaflet + CartoDB dark tiles (no API key needed)
 - PDF generation via Puppeteer (`scripts/generate-pdf.mjs`)
+
+### Playwright (dev/testing)
+To view slides with Playwright MCP, start the dev server then navigate:
+```
+npm run dev
+# In Playwright: navigate to http://localhost:3000/landiq/pitch#N
+# where N is the 1-based slide number (e.g. #2 = Team slide)
+```
+- Use `?t=<any>#N` to force a fresh page load when only the hash changes
+- The page uses HMR — code changes reflect in real time without restart
+- `browser_take_screenshot` to capture the current slide visually
 
 ### Config Notes
 - `basePath: '/landiq'` in `next.config.ts` — all URLs prefixed with `/landiq/`

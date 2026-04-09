@@ -4,35 +4,38 @@
 
 - **演讲时间**: 总共 15 分钟
 - **演讲人数**: 4 人 (组长 Hal + 组员 Skylar, Edward, Jason)
-- **PPT 来源**: 老板制作, 已上线 https://australiaitgroup.github.io/landiq/pitch
-- **代码仓库**: `australiaitgroup/landiq` (独立于主项目 `land-iq`)
+- **PPT 来源**: 老板制作, fork 到 Jason26214/landiq
+- **线上网址**: https://jason26214.github.io/landiq/pitch
+- **代码仓库**: `Jason26214/landiq` (fork 自 `australiaitgroup/landiq`)
 - **本地路径**: `D:\Codes\p3\LandIQ\landiq`
 - **开发预览**: `npm run dev` -> `http://localhost:3000/landiq/pitch`
 
-## 现有 PPT 内容 (18 页)
+## PPT 内容 (20 页, 编号从 1 开始)
 
 | # | Slide | 内容 | 预估时长 |
 |---|-------|------|----------|
-| 0 | Cover | LandIQ 标题 + "Land Feasibility. Automated." | 15s |
-| 1 | Problem | 4 个痛点卡片: 数据碎片化/手工报告/无统一系统/DCP 黑箱 | 45-60s |
-| 2 | Market | 4 个数据: 10,000+ 开发商 / 8hrs 筛选 / $250K+ DD / 12 weeks | 40s |
-| 3 | Solution Hero | "Address in, feasibility out" 核心 slogan | 20s |
-| 4 | How It Works | 3 步流程: 输入地址 -> AI 查询 30+ 数据源 -> 出可行性报告 | 40s |
-| 5 | Data Engine | NSW/VIC 政府 API 数据矩阵, 8 项数据类型, 响应时间 | 50s |
-| 6 | AI Report | AI 报告生成能力, DCP 解析/风险检测/收益计算/可比销售 | 40s |
-| 7 | Demo | 交互式 Leaflet 地图, 3 个真实地块, 实时规划数据 | 45s |
-| 8 | Report Showcase | 完整可行性报告展示, 6 个章节 + 财务指标 | 50s |
-| 9 | Document Mgmt | Before->After 对比 + 文档浏览器 mockup | 35s |
-| 10 | Chrome Ext | Chrome 插件 3 步演示, 浏览器 mockup | 30s |
-| 11 | Email Hub | 3 个邮箱账户 + 统一收件箱 + AI 自动标签 | 35s |
-| 12 | Modules | 5 大模块: 拿地/可行性/项目管理/销售/运营 | 30s |
-| 13 | Competitive | 对比矩阵: LandIQ vs Landchecker/Archistar/CoreLogic/Feasly | 40s |
-| 14 | Pricing (Cost) | $100K+ 沉没成本 + 6 项成本对比表 + ~80% 节省 | 50s |
-| 15 | Time Savings | 2-4 weeks -> <1 hour + 6 项时间对比表 | 45s |
-| 16 | Roadmap | 2026 年 5 个里程碑: 4-5月 -> 12月 | 35s |
-| 17 | CTA | "Book a Demo" + 联系方式 | 15s |
+| 1 | Cover | LandIQ 标题 + "Land Feasibility. Automated." | 20s |
+| 2 | Team | 14 人团队名单 (Mentor/Lead/BA/DevOps/Dev) | 25s |
+| 3 | Problem | 4 个痛点卡片: 数据碎片化/手工报告/无统一系统/DCP 黑箱 | 50s |
+| 4 | Market | 4 个数据: 10,000+ 开发商 / 8hrs 筛选 / $250K+ DD / 12 weeks | 40s |
+| 5 | Solution Hero | "Address in, feasibility out" 核心 slogan | 25s |
+| 6 | How It Works | 3 步流程: 输入地址 -> AI 查询 30+ 数据源 -> 出可行性报告 | 40s |
+| 7 | Data Engine | NSW/VIC 政府 API 数据矩阵, 8 项数据类型, 响应时间 | 50s |
+| 8 | AI Report | AI 报告生成能力, DCP 解析/风险检测/收益计算/可比销售 | 40s |
+| 9 | Demo | 交互式 Leaflet 地图, 3 个真实地块, 实时规划数据 | 45s |
+| 10 | Report Showcase | 完整可行性报告展示, 6 个章节 + 财务指标 | 50s |
+| 11 | Document Mgmt | Before->After 对比 + 文档浏览器 mockup | 35s |
+| 12 | Chrome Ext | Chrome 插件 3 步演示, 浏览器 mockup | 30s |
+| 13 | Email Hub | 3 个邮箱账户 + 统一收件箱 + AI 自动标签 | 30s |
+| 14 | Modules | 5 大模块: 拿地/可行性/项目管理/销售/运营 | 30s |
+| 15 | Competitive | 对比矩阵: LandIQ vs Landchecker/Archistar/CoreLogic/Feasly | 40s |
+| 16 | Pricing (Cost) | $100K+ 沉没成本 + 6 项成本对比表 + ~80% 节省 | 50s |
+| 17 | Time Savings | 2-4 weeks -> <1 hour + 6 项时间对比表 | 45s |
+| 18 | Roadmap | 2026 年 5 个里程碑: 4-5月 -> 12月 | 35s |
+| 19 | Tech Stack | Monorepo 4 App + API + 基础设施 + AWS 部署 | 40s |
+| 20 | CTA | "Book a Demo" + 联系方式 | 15s |
 
-**现有内容预估总时长: ~10-11 分钟**
+**预估总时长: ~12-13 分钟 (加自然停顿约 15 分钟)**
 
 ## 缺少的内容: 技术栈 (Tech Stack)
 

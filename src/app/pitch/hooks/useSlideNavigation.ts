@@ -21,10 +21,11 @@ export function useSlideNavigation({ totalSlides }: UseSlideNavigationOptions) {
   );
 
   // Read URL hash on mount (client-only) to jump to a specific slide
+  // Hash uses 1-based numbering to match the on-screen counter (e.g. #1 = first slide)
   useEffect(() => {
     const hash = parseInt(window.location.hash.replace("#", ""), 10);
-    if (hash > 0 && hash < totalSlides) {
-      setCurrentSlide(hash);
+    if (hash >= 1 && hash <= totalSlides) {
+      setCurrentSlide(hash - 1);
     }
   }, [totalSlides]);
 
