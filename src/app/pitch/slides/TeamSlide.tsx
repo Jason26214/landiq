@@ -21,10 +21,42 @@ const roles = [
 export function TeamSlide() {
 	return (
 		<SlideLayout bg="bg-surface-300">
-			<div className="grid grid-cols-12 gap-16 w-full items-center">
+			{/* Decorative arc — bottom left */}
+			<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 0.05 }}
+				transition={{ delay: 0.5 }}
+				className="absolute -bottom-40 -left-40 w-[600px] h-[600px] rounded-full border-[2px] border-primary-800"
+			/>
+			<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 0.03 }}
+				transition={{ delay: 0.7 }}
+				className="absolute -bottom-56 -left-56 w-[750px] h-[750px] rounded-full border-[2px] border-primary-800"
+			/>
+
+			{/* Decorative vertical lines — right side */}
+			<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 0.06 }}
+				transition={{ delay: 0.8 }}
+				className="absolute right-16 top-0 bottom-0 flex gap-6"
+			>
+				{[0, 1, 2].map((i) => (
+					<div key={i} className="w-[1px] h-full bg-primary-800" />
+				))}
+			</motion.div>
+
+			<div className="grid grid-cols-12 gap-16 w-full items-center relative z-10">
 				{/* Left — Text */}
 				<div className="col-span-4">
 					<FadeIn>
+						<motion.div
+							initial={{ width: 0 }}
+							animate={{ width: 60 }}
+							transition={{ duration: 0.8, delay: 0.2 }}
+							className="h-[2px] bg-accent mb-6"
+						/>
 						<p className="font-sans text-[15px] uppercase tracking-[0.08em] text-primary-600 mb-3">
 							Our Team
 						</p>
