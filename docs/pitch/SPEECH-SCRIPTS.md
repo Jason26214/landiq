@@ -92,7 +92,7 @@ The report follows a structured reasoning chain. Planning Analysis — what are 
 
 This is the blueprint we're building our AI engineering around. Each step feeds into the next, and the AI reaches a conclusion that's explainable and traceable — not a black box.
 
-In this case, the AI recommendation is: Proceed — strong yield potential with manageable heritage constraint. The audience for this report — a property developer — can see exactly why the AI said yes, and what the one risk factor is.
+In this case, the AI recommendation is: Proceed — strong yield potential with manageable heritage constraint. A property developer can see exactly why the AI said yes, and what the one risk factor is.
 
 I'll pass it over to Speaker C to cover the supporting features.
 
