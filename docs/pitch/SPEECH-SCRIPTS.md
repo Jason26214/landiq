@@ -84,15 +84,21 @@ These are the types of data our data engine will query from government APIs in r
 
 From here, the goal is one click to generate a full feasibility report.
 
-### Slide 10 — Report Showcase (~50s)
+### Slide 10 — Report Showcase (~60s)
 
-And this is what that report looks like. A professional feasibility report for 42 Bridge Street, Sydney.
+And this is what the generated report looks like. Let me walk you through how the AI actually thinks.
 
-Six sections — executive summary, planning analysis, development potential, risk assessment, financial feasibility, and a final recommendation.
+The final recommendation here is: Proceed — strong yield potential with manageable heritage constraint. But how did the AI get there? It followed a chain of reasoning using real data.
 
-The key metrics speak for themselves: maximum GFA of eighty-two thousand square metres, an estimated four hundred and eighty apartments, a development margin of twenty-eight point eight percent, and an IRR of twenty-four point two percent.
+First, planning analysis. The site is zoned SP5 with an FSR of eight to one and SEPP-controlled height — that means high-density development is permitted.
 
-The AI recommendation? Proceed — strong yield potential with manageable heritage constraint.
+From that, the AI calculates development potential — a maximum GFA of eighty-two thousand square metres, an estimated four hundred and eighty apartments, at ninety-five percent efficiency.
+
+Then risk assessment. Heritage overlay is detected — that's the constraint. But flood is clear, bushfire is clear. So the risk is present but isolated.
+
+Now financials. Gross realisation value of three hundred and eighty-four million, total development cost of two hundred and ninety-eight million. That gives a margin of twenty-eight point eight percent and an IRR of twenty-four point two percent.
+
+So the AI weighs all of this — strong yield, one manageable risk — and recommends: proceed. This isn't a black box. Every step of the reasoning is visible and traceable.
 
 I'll pass it over to Speaker C to cover the supporting features.
 
