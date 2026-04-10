@@ -12,11 +12,11 @@ import { DocumentMgmtSlide } from "./DocumentMgmtSlide";
 import { ChromeExtSlide } from "./ChromeExtSlide";
 import { EmailHubSlide } from "./EmailHubSlide";
 import { ModulesSlide } from "./ModulesSlide";
+import { TechStackSlide } from "./TechStackSlide";
 import { CompetitiveSlide } from "./CompetitiveSlide";
 import { PricingSlide } from "./PricingSlide";
 import { TimeSavingsSlide } from "./TimeSavingsSlide";
 import { RoadmapSlide } from "./RoadmapSlide";
-import { TechStackSlide } from "./TechStackSlide";
 import { CTASlide } from "./CTASlide";
 
 export const slides = [
@@ -34,10 +34,10 @@ export const slides = [
   ChromeExtSlide,      // 12 — Chrome Extension
   EmailHubSlide,       // 13 — Email Hub
   ModulesSlide,        // 14 — Modules
-  CompetitiveSlide,    // 15 — Competitive
-  PricingSlide,        // 16 — Cost Savings
-  TimeSavingsSlide,    // 17 — Time Savings
-  RoadmapSlide,        // 18 — Roadmap
-  TechStackSlide,      // 19 — Tech Stack
+  TechStackSlide,      // 15 — Tech Stack
+  CompetitiveSlide,    // 16 — Competitive
+  PricingSlide,        // 17 — Cost Savings
+  TimeSavingsSlide,    // 18 — Time Savings
+  RoadmapSlide,        // 19 — Roadmap
   CTASlide,            // 20 — CTA
 ];

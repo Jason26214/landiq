@@ -28,11 +28,11 @@
 | 12 | Chrome Ext | Chrome 插件 3 步演示, 浏览器 mockup | 30s |
 | 13 | Email Hub | 3 个邮箱账户 + 统一收件箱 + AI 自动标签 | 30s |
 | 14 | Modules | 5 大模块: 拿地/可行性/项目管理/销售/运营 | 30s |
-| 15 | Competitive | 对比矩阵: LandIQ vs Landchecker/Archistar/CoreLogic/Feasly | 40s |
-| 16 | Pricing (Cost) | $100K+ 沉没成本 + 6 项成本对比表 + ~80% 节省 | 50s |
-| 17 | Time Savings | 2-4 weeks -> <1 hour + 6 项时间对比表 | 45s |
-| 18 | Roadmap | 2026 年 5 个里程碑: 4-5月 -> 12月 | 35s |
-| 19 | Tech Stack | Monorepo 4 App + API + 基础设施 + AWS 部署 | 40s |
+| 15 | Tech Stack | Monorepo 4 App + API + 基础设施 + AWS 部署 | 40s |
+| 16 | Competitive | 对比矩阵: LandIQ vs Landchecker/Archistar/CoreLogic/Feasly | 40s |
+| 17 | Pricing (Cost) | $100K+ 沉没成本 + 6 项成本对比表 + ~80% 节省 | 50s |
+| 18 | Time Savings | 2-4 weeks -> <1 hour + 6 项时间对比表 | 45s |
+| 19 | Roadmap | 2026 年 5 个里程碑: 4-5月 -> 12月 | 35s |
 | 20 | CTA | "Book a Demo" + 联系方式 | 15s |
 
 **预估总时长: ~12-13 分钟 (加自然停顿约 15 分钟)**

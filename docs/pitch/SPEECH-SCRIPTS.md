@@ -132,53 +132,7 @@ Phase 1 delivers land acquisition pipeline management, the feasibility engine, a
 
 Phase 2 adds property sales — unit inventory, pricing, buyer tracking — and admin operations including employee management and financial tracking.
 
-### Slide 15 — Competitive (~40s)
-
-So how do we compare to what's already out there?
-
-This matrix shows LandIQ against Landchecker, Archistar, CoreLogic, and Feasly across seven capabilities. As you can see, LandIQ is the only platform with full coverage across all seven.
-
-Our key differentiator — we're the only platform that digitises DCP rules via AI and connects the entire workflow from planning data through feasibility analysis to project management. No other product does this end to end.
-
-Over to Speaker D for the business case and technical architecture.
-
----
-
-## Speaker D — Slides 16–20
-
-### Slide 16 — Pricing / Cost Savings (~50s)
-
-Thanks. Let's talk about the numbers.
-
-Every site that doesn't proceed costs developers over a hundred thousand dollars in sunk due diligence. And Australian developers abandon seventy to eighty percent of sites after spending tens of thousands on investigations.
-
-Looking at the cost breakdown — traditional desktop planning research costs three to eight thousand dollars. With LandIQ, it's fully automated, a hundred percent savings. Town planner initial assessment — five to fifteen thousand dollars traditionally, eighty percent savings with AI-generated reports. Constraint screening, yield modelling, document management, comparable sales — all significantly reduced.
-
-The total? Phase 1 desktop screening drops from twenty-two to sixty-three thousand dollars down to roughly five thousand. That's approximately eighty percent savings.
-
-If a developer evaluates ten sites per year and abandons seven, that's over seven hundred thousand dollars wasted in traditional due diligence. With LandIQ, the same screening costs under fifty thousand.
-
-### Slide 17 — Time Savings (~45s)
-
-And it's not just about cost — it's about speed.
-
-The traditional desktop feasibility process takes two to four weeks. With LandIQ, it's under one hour.
-
-Desktop planning research — two to three days becomes less than five minutes. Constraint screening — one to two days becomes instant. Initial feasibility assessment — three to five days becomes less than ten minutes. Report compilation, revisions — another week traditionally, now AI-generated with one-click re-run.
-
-Speed is competitive advantage. A developer evaluating ten sites per month can now screen all of them in a single morning, instead of dedicating a team member for two months. First mover on the best sites wins.
-
-### Slide 18 — Roadmap (~35s)
-
-Here's our delivery roadmap for 2026.
-
-We're currently in the Core Platform phase — April through May — building the NSW and VIC data engine, site intelligence search, land acquisition pipeline, and interactive map.
-
-June through July brings AI reports and document management. August through September adds the Chrome extension and integrations. October through November is national expansion to Queensland, South Australia, and Western Australia. And by December 2026, we target full platform delivery.
-
-Nine months from first line of code to a full national platform, leveraging AI-assisted development for three to five times faster delivery.
-
-### Slide 19 — Tech Stack (~40s)
+### Slide 15 — Tech Stack (~40s)
 
 Under the hood, LandIQ is built as a Turborepo monorepo with four purpose-built applications.
 
@@ -189,6 +143,52 @@ All three connect through a shared type system using Zod schemas to a unified RE
 On the infrastructure side — PostgreSQL with PostGIS for geospatial queries and pgvector for AI embeddings, Redis with BullMQ for async job processing, and AWS S3 for file storage.
 
 Everything deploys to AWS Sydney — EC2, S3, and CloudFront — with a full GitHub Actions CI/CD pipeline running lint, test, build, and deploy on every push.
+
+Over to Speaker D for the business case.
+
+---
+
+## Speaker D — Slides 16–20
+
+### Slide 16 — Competitive (~40s)
+
+Thanks. So how do we compare to what's already out there?
+
+This matrix shows LandIQ against Landchecker, Archistar, CoreLogic, and Feasly across seven capabilities. As you can see, LandIQ is the only platform with full coverage across all seven.
+
+Our key differentiator — we're the only platform that digitises DCP rules via AI and connects the entire workflow from planning data through feasibility analysis to project management. No other product does this end to end.
+
+### Slide 17 — Pricing / Cost Savings (~50s)
+
+Let's talk about the numbers.
+
+Every site that doesn't proceed costs developers over a hundred thousand dollars in sunk due diligence. And Australian developers abandon seventy to eighty percent of sites after spending tens of thousands on investigations.
+
+Looking at the cost breakdown — traditional desktop planning research costs three to eight thousand dollars. With LandIQ, it's fully automated, a hundred percent savings. Town planner initial assessment — five to fifteen thousand dollars traditionally, eighty percent savings with AI-generated reports. Constraint screening, yield modelling, document management, comparable sales — all significantly reduced.
+
+The total? Phase 1 desktop screening drops from twenty-two to sixty-three thousand dollars down to roughly five thousand. That's approximately eighty percent savings.
+
+If a developer evaluates ten sites per year and abandons seven, that's over seven hundred thousand dollars wasted in traditional due diligence. With LandIQ, the same screening costs under fifty thousand.
+
+### Slide 18 — Time Savings (~45s)
+
+And it's not just about cost — it's about speed.
+
+The traditional desktop feasibility process takes two to four weeks. With LandIQ, it's under one hour.
+
+Desktop planning research — two to three days becomes less than five minutes. Constraint screening — one to two days becomes instant. Initial feasibility assessment — three to five days becomes less than ten minutes. Report compilation, revisions — another week traditionally, now AI-generated with one-click re-run.
+
+Speed is competitive advantage. A developer evaluating ten sites per month can now screen all of them in a single morning, instead of dedicating a team member for two months. First mover on the best sites wins.
+
+### Slide 19 — Roadmap (~35s)
+
+Here's our delivery roadmap for 2026.
+
+We're currently in the Core Platform phase — April through May — building the NSW and VIC data engine, site intelligence search, land acquisition pipeline, and interactive map.
+
+June through July brings AI reports and document management. August through September adds the Chrome extension and integrations. October through November is national expansion to Queensland, South Australia, and Western Australia. And by December 2026, we target full platform delivery.
+
+Nine months from first line of code to a full national platform, leveraging AI-assisted development for three to five times faster delivery.
 
 ### Slide 20 — CTA (~15s)
 
