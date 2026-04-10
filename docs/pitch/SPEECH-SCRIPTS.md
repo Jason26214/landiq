@@ -76,13 +76,13 @@ Under the hood, we're parsing council DCP PDFs through our LLM, automatically de
 
 ### Slide 9 — Demo (~45s)
 
-This is our live demo. What you're looking at is an interactive map powered by Leaflet with CartoDB tiles.
+This is our interactive map interface, built with Leaflet and CartoDB tiles. Unlike a regular Google Map, this is a polygon-based map — it shows actual lot boundaries and parcel areas, which is exactly what property developers need when evaluating land.
 
-We've got three real parcels loaded here — one in Sydney CBD, one in Parramatta, and one in Melbourne. When you click on a site, the panel on the right populates with live government data.
+We've loaded three real parcels here — one in Sydney CBD, one in Parramatta, and one in Melbourne. When you click on a site, the panel on the right shows key assessment factors: zoning, FSR, height limit, bushfire status, heritage overlay, and flood risk.
 
-You can see the zoning, FSR, height limit, bushfire status, heritage overlay, and flood risk — all pulled in real time from government APIs. This is not a mockup. This is real data, returned in under three hundred milliseconds.
+These are the types of data our data engine will query from government APIs in real time — authoritative planning data that developers currently spend thousands of dollars and weeks of manual research to collect.
 
-From here, you can generate a full feasibility report with one click.
+From here, the goal is one click to generate a full feasibility report.
 
 ### Slide 10 — Report Showcase (~50s)
 
