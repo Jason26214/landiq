@@ -24,8 +24,8 @@ node scripts/generate-pdf.mjs  # Generate pitch deck PDF (requires dev server ru
 - **Fixed 1440×900 viewport** with `transform: scale` — NOT responsive, behaves like PowerPoint
 - All slides in `slides/` directory, registered in `slides/index.ts`
 - **Slide numbering is 1-based** — matches the on-screen counter (bottom-left "X / 20")
-- Navigation: keyboard (arrows/space), click (right 70% = next), touch swipe, dot navigator
-- URL hash navigation: append `#N` to jump to slide N (1-based), e.g. `/landiq/pitch#19` → Tech Stack
+- Navigation: keyboard (arrows/space/F for fullscreen), click (right 70% = next), touch swipe, dot navigator
+- URL query param navigation: append `?page=N` to jump to slide N (1-based), e.g. `/landiq/pitch?page=19` → Phases
 - Shared animation components: `FadeIn`, `StaggerContainer`, `AnimatedCounter`
 - Interactive map demo: Leaflet + CartoDB dark tiles (no API key needed)
 - PDF generation via Puppeteer (`scripts/generate-pdf.mjs`)
@@ -34,17 +34,17 @@ node scripts/generate-pdf.mjs  # Generate pitch deck PDF (requires dev server ru
 To view slides with Playwright MCP, start the dev server then navigate:
 ```
 npm run dev
-# In Playwright: navigate to http://localhost:3000/landiq/pitch#N
-# where N is the 1-based slide number (e.g. #2 = Team slide)
+# In Playwright: navigate to http://localhost:3000/landiq/pitch?page=N
+# where N is the 1-based slide number (e.g. ?page=2 = Team slide)
 ```
-- Use `?t=<any>#N` to force a fresh page load when only the hash changes
+- URL uses `?page=N` query param — each navigation is a fresh page load, no workarounds needed
 - The page uses HMR — code changes reflect in real time without restart
 - `browser_take_screenshot` to capture the current slide visually
 
 ### Config Notes
 - `basePath: '/landiq'` in `next.config.ts` — all URLs prefixed with `/landiq/`
 - `output: 'export'` for static GitHub Pages deployment
-- Image paths must use `/landiq/images/...` prefix
+- Image paths use `process.env.NEXT_PUBLIC_BASE_PATH` (set to `/landiq` via `next.config.ts` env)
 - `images.unoptimized: true` required for static export
 
 ## Key Domain Context

@@ -1,8 +1,8 @@
-"use client";
+'use client'
 
-import { motion } from "framer-motion";
-import { SlideLayout } from "../shared/SlideLayout";
-import { FadeIn } from "../shared/FadeIn";
+import { motion } from 'framer-motion'
+import { SlideLayout } from '../shared/SlideLayout'
+import { FadeIn } from '../shared/FadeIn'
 import {
 	Globe,
 	LayoutDashboard,
@@ -12,13 +12,31 @@ import {
 	HardDrive,
 	Cloud,
 	GitBranch,
-} from "lucide-react";
+} from 'lucide-react'
 
 const frontendApps = [
-	{ name: "Marketing Website", domain: "landiq.com.au", tech: "Next.js 15", badge: "SSR", icon: Globe },
-	{ name: "Enterprise Portal", domain: "app.landiq.com.au", tech: "React 19 + Vite", badge: "SPA", icon: LayoutDashboard },
-	{ name: "Admin Console", domain: "console.landiq.com.au", tech: "React 19 + Vite", badge: "SPA", icon: Shield },
-];
+	{
+		name: 'Marketing Website',
+		domain: 'landiq.com.au',
+		tech: 'Next.js 15',
+		badge: 'SSR',
+		icon: Globe,
+	},
+	{
+		name: 'Enterprise Portal',
+		domain: 'app.landiq.com.au',
+		tech: 'React 19 + Vite',
+		badge: 'SPA',
+		icon: LayoutDashboard,
+	},
+	{
+		name: 'Admin Console',
+		domain: 'console.landiq.com.au',
+		tech: 'React 19 + Vite',
+		badge: 'SPA',
+		icon: Shield,
+	},
+]
 
 export function TechStackSlide() {
 	return (
@@ -31,8 +49,8 @@ export function TechStackSlide() {
 				className="absolute inset-0"
 				style={{
 					backgroundImage:
-						"linear-gradient(#134A32 1px, transparent 1px), linear-gradient(90deg, #134A32 1px, transparent 1px)",
-					backgroundSize: "80px 80px",
+						'linear-gradient(#134A32 1px, transparent 1px), linear-gradient(90deg, #134A32 1px, transparent 1px)',
+					backgroundSize: '80px 80px',
 				}}
 			/>
 
@@ -69,7 +87,10 @@ export function TechStackSlide() {
 						>
 							<div className="flex items-center gap-3.5 mb-5">
 								<div className="w-12 h-12 rounded-full bg-primary-800 flex items-center justify-center">
-									<app.icon className="w-5.5 h-5.5 text-white" strokeWidth={1.5} />
+									<app.icon
+										className="w-5.5 h-5.5 text-white"
+										strokeWidth={1.5}
+									/>
 								</div>
 								<div>
 									<h3 className="font-sans text-[17px] font-medium text-primary-900">
@@ -133,7 +154,7 @@ export function TechStackSlide() {
 							<span className="font-sans text-[12px] font-medium text-accent bg-accent/10 px-3.5 py-2 rounded-full">
 								Shared: Zod Schemas
 							</span>
-							{["NestJS 11", "TypeORM", "TypeScript"].map((tech, i) => (
+							{['NestJS 11', 'TypeORM', 'TypeScript'].map((tech, i) => (
 								<motion.span
 									key={tech}
 									initial={{ opacity: 0, scale: 0.9 }}
@@ -163,22 +184,34 @@ export function TechStackSlide() {
 							<div className="flex items-center gap-3">
 								<Database className="w-5 h-5 text-primary-600" strokeWidth={1.5} />
 								<div>
-									<p className="font-sans text-[15px] font-medium text-primary-900">PostgreSQL</p>
-									<p className="font-sans text-[12px] text-surface-500">PostGIS · pgvector</p>
+									<p className="font-sans text-[15px] font-medium text-primary-900">
+										PostgreSQL
+									</p>
+									<p className="font-sans text-[12px] text-surface-500">
+										PostGIS · pgvector
+									</p>
 								</div>
 							</div>
 							<div className="flex items-center gap-3">
 								<HardDrive className="w-5 h-5 text-primary-600" strokeWidth={1.5} />
 								<div>
-									<p className="font-sans text-[15px] font-medium text-primary-900">Redis</p>
-									<p className="font-sans text-[12px] text-surface-500">BullMQ Queues</p>
+									<p className="font-sans text-[15px] font-medium text-primary-900">
+										Redis
+									</p>
+									<p className="font-sans text-[12px] text-surface-500">
+										BullMQ Queues
+									</p>
 								</div>
 							</div>
 							<div className="flex items-center gap-3">
 								<Cloud className="w-5 h-5 text-primary-600" strokeWidth={1.5} />
 								<div>
-									<p className="font-sans text-[15px] font-medium text-primary-900">AWS S3</p>
-									<p className="font-sans text-[12px] text-surface-500">File Storage</p>
+									<p className="font-sans text-[15px] font-medium text-primary-900">
+										AWS S3
+									</p>
+									<p className="font-sans text-[12px] text-surface-500">
+										File Storage
+									</p>
 								</div>
 							</div>
 						</div>
@@ -197,15 +230,23 @@ export function TechStackSlide() {
 							<div className="flex items-center gap-3">
 								<Cloud className="w-5 h-5 text-primary-600" strokeWidth={1.5} />
 								<div>
-									<p className="font-sans text-[15px] font-medium text-primary-900">AWS Sydney</p>
-									<p className="font-sans text-[12px] text-surface-500">EC2 · S3 · CloudFront</p>
+									<p className="font-sans text-[15px] font-medium text-primary-900">
+										AWS Sydney
+									</p>
+									<p className="font-sans text-[12px] text-surface-500">
+										EC2 · S3 · CloudFront
+									</p>
 								</div>
 							</div>
 							<div className="flex items-center gap-3">
 								<GitBranch className="w-5 h-5 text-primary-600" strokeWidth={1.5} />
 								<div>
-									<p className="font-sans text-[15px] font-medium text-primary-900">GitHub Actions</p>
-									<p className="font-sans text-[12px] text-surface-500">Lint → Test → Build → Deploy</p>
+									<p className="font-sans text-[15px] font-medium text-primary-900">
+										GitHub Actions
+									</p>
+									<p className="font-sans text-[12px] text-surface-500">
+										Lint → Test → Build → Deploy
+									</p>
 								</div>
 							</div>
 						</div>
@@ -213,5 +254,5 @@ export function TechStackSlide() {
 				</div>
 			</div>
 		</SlideLayout>
-	);
+	)
 }
